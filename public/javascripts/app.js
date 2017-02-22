@@ -9,7 +9,7 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
 	})
 
 	.when('/inserir', {
-		templateUrl: 'template_inserir/inserir.html',
+		templateUrl: 'template_inserir/inserir.php',
 		controller: 'inserirController',
 		controllerAs: 'vm',
 		resolve:{
