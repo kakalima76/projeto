@@ -55,6 +55,12 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
 		controller: 'contribuirController',
 		controllerAs: 'vm'
 	})
+
+	.when('/template_inserir/inserir.php', {
+		templateUrl: 'template_inserir/inserir.php',
+		controller: '',
+		controllerAs: 'vm'
+	})
 	
 
 	.otherwise({redirectTo: '/'});
