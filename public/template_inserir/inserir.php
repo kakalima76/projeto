@@ -19,12 +19,15 @@
 		</center>
 	</div>
 
+	 <form action="#" method="post">
+            Código de barras
+            (<a href="http://zxing.appspot.com/scan?ret=https://arquivo.herokuapp.com/template_inserir/inserir.php?codigo={CODE}">Leitor</a>):
+            <input type="text" name="cod" value="" />
+        </form>
+
 	<form name="myForm">
 		<div class="form-group">
-
-				(<a href="http://zxing.appspot.com/scan?ret=https://arquivo.herokuapp.com/template_inserir/inserir.php?codigo={CODE}">Leitor</a>):
-            	<input type="text" name="cod" value="<?= $_GET['codigo'] ?>" />
-        
+       
 	    		
 				<center><span class="error" ng-show="vm.showError">{{vm.message}}</span></center>
 
