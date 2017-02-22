@@ -1,7 +1,7 @@
 (function(){
 
 angular.module('app')
-.controller('inserirController', ['$scope', 'pontosService', '$window', 'loginService', 'itensService', function($scope, pontosService, $window, loginService, itensService){
+.controller('inserirController', ['$cordovaBarcodeScanner', '$scope', 'pontosService', '$window', 'loginService', 'itensService', function($cordovaBarcodeScanner, $scope, pontosService, $window, loginService, itensService){
 	var vm = this;
 	vm.user = 'Agente: ' + loginService.usuario().name;
 	vm.matricula = 'Matrícula:  ' + loginService.usuario().matricula;
@@ -10,6 +10,14 @@ angular.module('app')
 	vm.ocultarDocumento = false;
 	vm.showError = false;
 	vm.mostrarLoading = false
+
+	$cordovaBarcodeScanner
+      .scan()
+      .then(function(barcodeData) {
+        // Success! Barcode data is here
+      }, function(error) {
+        // An error occurred
+      });
 
 	vm.logoff = function(){
 		$window.localStorage.removeItem('token');

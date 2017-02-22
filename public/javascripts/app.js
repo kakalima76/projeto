@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute', 'ui.bootstrap'])
+angular.module('app', ['ngRoute', 'ui.bootstrap', 'ngCordova'])
 
 .config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 	$routeProvider
